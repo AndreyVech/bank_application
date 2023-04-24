@@ -1,0 +1,23 @@
+<!DOCTYPE HTMl>
+<head>
+    Добро пожаловать в BANK!
+</head>
+<body>
+
+<div>
+    <form method="post" action="login">
+        <input type="text" name="name" placeholder="Введите имя">
+        <input type="text" name="password" placeholder="Введите пароль">
+        <button type="submit">Войти</button>
+    </form>
+    {{#error_txt}}
+        <div>
+            <span>
+                {{error_txt}}
+            </span>
+        </div>
+    {{/error_txt}}
+</div>
+
+</body>
+</html>
