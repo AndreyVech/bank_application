@@ -4,14 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class TransactionCash {
+@NotNull
+public class TransactionCashDto {
     private BigInteger userId;
     private String accNum;
     private BigDecimal summa;
+    private int isCredit;
+    private String atmNum;
 }

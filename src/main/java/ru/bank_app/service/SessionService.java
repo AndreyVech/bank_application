@@ -25,7 +25,7 @@ public class SessionService {
     @Autowired
     private UserRepository userRepository;
 
-    @Scheduled(fixedRate = 180000)
+    @Scheduled(fixedRate = 111180000)
     public void clearAllSessions() {
         sessionRepository.deleteAll();
     }

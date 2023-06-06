@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+
 @Entity
 @Table(name = "accounts")
 @Data
@@ -28,4 +29,6 @@ public class EntityAccount {
     @NotNull
     private BigInteger userId;
 
+//    @ManyToOne
+//    EntityUser entityUser;
 }
