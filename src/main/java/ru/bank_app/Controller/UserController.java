@@ -12,9 +12,6 @@ import ru.bank_app.repository.SessionRepository;
 import ru.bank_app.repository.UserRepository;
 import ru.bank_app.service.UserService;
 
-import javax.validation.ValidationException;
-import java.util.List;
-
 @RestController
 @RequestMapping("${application.endpoint.root}")
 @RequiredArgsConstructor
@@ -29,7 +26,7 @@ public class UserController {
 
     @PostMapping("${application.endpoint.login}")
     @ApiOperation("Вход пользователя, получение сессии")
-    public ResponseEntity<String> atmLogin(@RequestBody EntityUser user) {
+    public ResponseEntity<String> userLogin(@RequestBody EntityUser user) {
         EntityUser dbUser = userService.findByName(user.getName());
         if (dbUser != null && dbUser.getPassword().equals(user.getPassword())) {
             EntitySession entitySession = new EntitySession();
